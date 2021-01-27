@@ -1,5 +1,6 @@
 import 'package:delivery_app/src/widgets/back_button.dart';
 import 'package:delivery_app/src/widgets/custom_button.dart';
+import 'package:delivery_app/src/widgets/show_alert.dart';
 import 'package:delivery_app/src/widgets/title_text.dart';
 import 'package:flutter/material.dart';
 
@@ -38,7 +39,15 @@ class ForgotPasswordPage extends StatelessWidget {
                   context: context,
                   text: 'Send',
                   onPressed: () {
-                    _showAlert(context);
+                    showAlert(
+                        context: context,
+                        title: 'Your password has been reset',
+                        body:
+                            "You'll shortly receive an email with a code to setup a new password",
+                        image: 'assets/lock.png',
+                        navigateTo: 'login',
+                        textButton: 'Done');
+
                     print('send');
                   }),
             ],
@@ -65,56 +74,5 @@ Widget _emailInput() {
             borderSide: BorderSide.none,
           )),
     ),
-  );
-}
-
-void _showAlert(BuildContext context) {
-  showDialog(
-    barrierDismissible: true,
-    context: context,
-    builder: (BuildContext context) {
-      return AlertDialog(
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(20.0))),
-        content: Container(
-          height: 350,
-          child: Column(
-            children: [
-              Image(
-                image: AssetImage('assets/lock.png'),
-                width: 130,
-                height: 130,
-              ),
-              Container(
-                margin: EdgeInsets.all(15.0),
-                child: Text(
-                  'Your password has been reset',
-                  style: TextStyle(
-                      color: Theme.of(context).primaryColor,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20.0),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.all(15.0),
-                child: Text(
-                  "You'll shortly receive an email with a code to setup a new password",
-                  style: TextStyle(
-                      color: Theme.of(context).primaryColor,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 15.0),
-                ),
-              ),
-              customButton(
-                  context: context,
-                  text: 'Done',
-                  onPressed: () {
-                    Navigator.pushNamed(context, 'login');
-                  })
-            ],
-          ),
-        ),
-      );
-    },
   );
 }
