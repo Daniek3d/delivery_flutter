@@ -1,8 +1,8 @@
 import 'dart:ui';
-import 'package:delivery_app/src/widgets/custom_button.dart';
+import 'package:delivery_app/src/features/presentation/common/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
-import 'package:delivery_app/src/pages/login_page.dart';
+import 'package:delivery_app/src/features/presentation/login_page/View/login_page.dart';
 
 class WelcomePage extends StatelessWidget {
   @override

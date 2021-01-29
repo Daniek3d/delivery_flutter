@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:delivery_app/src/tabs/explore_tab.dart';
-import 'package:delivery_app/src/tabs/favourites_tab.dart';
-import 'package:delivery_app/src/tabs/my_order_tab.dart';
-import 'package:delivery_app/src/tabs/profiel_tab.dart';
+import 'package:delivery_app/src/features/presentation/tabs/explorer_tab/view/explore_tab.dart';
+import 'package:delivery_app/src/features/presentation/tabs/favourite_tab/View/favourites_tab.dart';
+import 'package:delivery_app/src/features/presentation/tabs/my_order_tab/View/my_order_tab.dart';
+import 'package:delivery_app/src/features/presentation/tabs/profile_tab/View/profiel_tab.dart';
 
 class TabsPage extends StatefulWidget {
   @override

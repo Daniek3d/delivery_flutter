@@ -1,8 +1,9 @@
-import 'package:delivery_app/src/widgets/back_button.dart';
-import 'package:delivery_app/src/widgets/custom_button.dart';
-import 'package:delivery_app/src/widgets/show_alert.dart';
-import 'package:delivery_app/src/widgets/title_text.dart';
 import 'package:flutter/material.dart';
+
+import 'package:delivery_app/src/features/presentation/common/widgets/back_button.dart';
+import 'package:delivery_app/src/features/presentation/common/widgets/custom_button.dart';
+import 'package:delivery_app/src/features/presentation/common/widgets/show_alert.dart';
+import 'package:delivery_app/src/features/presentation/common/widgets/title_text.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
   @override
