@@ -1,3 +1,4 @@
+import 'package:delivery_app/src/features/presentation/common/widgets/show_alert.dart';
 import 'package:flutter/material.dart';
 
 import 'package:delivery_app/src/features/presentation/tabs/explorer_tab/view/explore_tab.dart';
@@ -17,6 +18,14 @@ class _TabsPageState extends State<TabsPage> {
     FavouritesTab(),
     ProfielTab()
   ];
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration.zero, () {
+      _getPermisionLocation(context);
+    });
+  }
 
   int _selectedItemIndex = 0;
 
@@ -50,5 +59,16 @@ class _TabsPageState extends State<TabsPage> {
         BottomNavigationBarItem(icon: Icon(Icons.person_pin), label: 'Profile'),
       ],
     );
+  }
+
+  Future _getPermisionLocation(context) async {
+    await showAlert(
+        onPresed: () => {},
+        context: context,
+        image: 'assets/location.png',
+        title: 'Enable yout Location',
+        body:
+            'Please allow to use yout location to show nearby restaurant on the map',
+        textButton: 'Enable location');
   }
 }

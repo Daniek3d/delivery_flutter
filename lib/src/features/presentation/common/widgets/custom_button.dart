@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 Widget customButton(
-    {BuildContext context, @required onPressed, String text = 'Log In'}) {
+    {BuildContext context, @required onPressed, String text = 'Log In', size}) {
   return Container(
     margin: EdgeInsets.only(top: 20.0),
     width: 350.0,

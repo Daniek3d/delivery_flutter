@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 
 import 'custom_button.dart';
 
-void showAlert(
+Future showAlert(
     {BuildContext context,
     String title,
     String body,
     String textButton,
     String navigateTo,
-    String image}) {
-  showDialog(
+    String image,
+    Function onPresed}) async {
+  await showDialog(
     barrierDismissible: true,
     context: context,
     builder: (BuildContext context) {
@@ -48,9 +49,11 @@ void showAlert(
               customButton(
                   context: context,
                   text: textButton,
-                  onPressed: () {
-                    Navigator.pushNamed(context, navigateTo);
-                  })
+                  onPressed: onPresed != null
+                      ? () {
+                          Navigator.pushNamed(context, navigateTo);
+                        }
+                      : onPresed)
             ],
           ),
         ),
