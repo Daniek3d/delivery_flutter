@@ -23,7 +23,9 @@ class ForgotPasswordPage extends StatelessWidget {
           padding: EdgeInsets.all(30.0),
           child: Column(
             children: [
-              titleText('Forgot password', Theme.of(context).primaryColor),
+              titleText(
+                  text: 'Forgot password',
+                  color: Theme.of(context).primaryColor),
               Container(
                 padding: EdgeInsets.all(10.0),
                 child: Text(

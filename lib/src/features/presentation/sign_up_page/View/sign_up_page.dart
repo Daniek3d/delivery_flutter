@@ -23,7 +23,9 @@ class SignUpPage extends StatelessWidget {
           padding: EdgeInsets.all(20),
           child: Column(
             children: [
-              titleText('Create an account', Theme.of(context).primaryColor),
+              titleText(
+                  text: 'Create an account',
+                  color: Theme.of(context).primaryColor),
               _userNameInput(context),
               _emailNameInput(context),
               _phoneNameInput(context),

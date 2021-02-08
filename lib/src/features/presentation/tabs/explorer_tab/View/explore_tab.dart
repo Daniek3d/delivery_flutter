@@ -1,3 +1,4 @@
+import 'package:delivery_app/src/features/presentation/common/widgets/populares_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
@@ -16,12 +17,37 @@ class ExploreTab extends StatelessWidget {
               _topBar(context),
               Container(
                   padding: EdgeInsets.symmetric(horizontal: 50),
-                  child: titleText('Discover new places', Colors.black)),
+                  child: titleText(
+                      text: 'Discover new places', color: Colors.black)),
               _sliderCards(context),
               _headers(context, 'Popular this week', 'Show all'),
-              _populares(context, 'https://source.unsplash.com/YzncgJOl6bk'),
-              _populares(context, 'https://source.unsplash.com/zNqArwc7Hh4'),
-              _populares(context, 'https://source.unsplash.com/FdtvQ6SJxmY'),
+              PopularesCard(
+                  textTitle: 'Andy & Cindy\'s Diner',
+                  subTitle: '87 Botsford Circle Apt',
+                  review: '4.5',
+                  rating: '233 raitings',
+                  botonText: 'Free Delivery',
+                  onTap: () => {},
+                  image:
+                      NetworkImage('https://source.unsplash.com/YzncgJOl6bk')),
+              PopularesCard(
+                  textTitle: 'Andy & Cindy\'s Diner',
+                  subTitle: '87 Botsford Circle Apt',
+                  review: '4.5',
+                  rating: '233 raitings',
+                  botonText: 'Free Delivery',
+                  onTap: () => {},
+                  image:
+                      NetworkImage('https://source.unsplash.com/zNqArwc7Hh4')),
+              PopularesCard(
+                  textTitle: 'Andy & Cindy\'s Diner',
+                  subTitle: '87 Botsford Circle Apt',
+                  review: '4.5',
+                  rating: '233 raitings',
+                  botonText: 'Free Delivery',
+                  onTap: () => {},
+                  image:
+                      NetworkImage('https://source.unsplash.com/FdtvQ6SJxmY')),
               SizedBox(
                 height: 10.0,
               ),
@@ -41,28 +67,31 @@ Widget _topBar(BuildContext context) {
     height: 70,
     child: Row(
       children: [
-        Container(
-          width: 310,
-          padding: EdgeInsets.all(10.0),
-          margin: EdgeInsets.all(16.0),
-          decoration: BoxDecoration(
-              border: Border.all(color: Color.fromRGBO(234, 236, 239, 1.0)),
-              borderRadius: BorderRadius.circular(20.0)),
-          child: Row(
-            children: [
-              Icon(
-                Icons.search,
-                size: 20.0,
-                color: gris,
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 5.0),
-                child: Text(
-                  'Search',
-                  style: TextStyle(color: gris, fontSize: 17.0),
+        GestureDetector(
+          onTap: () => Navigator.pushNamed(context, 'search'),
+          child: Container(
+            width: 310,
+            padding: EdgeInsets.all(10.0),
+            margin: EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
+                border: Border.all(color: Color.fromRGBO(234, 236, 239, 1.0)),
+                borderRadius: BorderRadius.circular(20.0)),
+            child: Row(
+              children: [
+                Icon(
+                  Icons.search,
+                  size: 20.0,
+                  color: gris,
                 ),
-              )
-            ],
+                Container(
+                  margin: EdgeInsets.only(left: 5.0),
+                  child: Text(
+                    'Search',
+                    style: TextStyle(color: gris, fontSize: 17.0),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
         Container(
@@ -188,7 +217,8 @@ Widget _headers(BuildContext context, String textHeader, String textAction) {
   return Row(children: [
     Container(
         alignment: Alignment.centerLeft,
-        child: titleText(textHeader, Colors.black, 20.0)),
+        child:
+            titleText(text: textHeader, color: Colors.black, fontSize: 20.0)),
     Spacer(),
     GestureDetector(
       child: Row(
@@ -207,7 +237,7 @@ Widget _headers(BuildContext context, String textHeader, String textAction) {
   ]);
 }
 
-Widget _populares(BuildContext context, String foto) {
+/* Widget _populares(BuildContext context, String foto) {
   return Column(
     children: [
       Container(
@@ -232,8 +262,10 @@ Widget _populares(BuildContext context, String foto) {
                 children: [
                   Container(
                       margin: EdgeInsets.symmetric(vertical: 7.0),
-                      child:
-                          titleText('Andy & Cindy\'s Diner', Colors.black, 17)),
+                      child: titleText(
+                          text: 'Andy & Cindy\'s Diner',
+                          color: Colors.black,
+                          fontSize: 17)),
                   Container(
                     alignment: Alignment.centerLeft,
                     margin: EdgeInsets.only(bottom: 5.0),
@@ -294,7 +326,7 @@ Widget _populares(BuildContext context, String foto) {
     ],
   );
 }
-
+ */
 Widget _sliderCollections() {
   return Container(
     height: 180.0,
