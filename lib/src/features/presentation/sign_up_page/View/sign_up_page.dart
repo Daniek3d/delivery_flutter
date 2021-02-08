@@ -29,7 +29,12 @@ class SignUpPage extends StatelessWidget {
               _phoneNameInput(context),
               _dateOfBitrhInput(context),
               _passwordInput(context),
-              customButton(context: context, text: 'Sign Up', onPressed: () {}),
+              customButton(
+                  context: context,
+                  text: 'Sign Up',
+                  colorText: Colors.white,
+                  colorBackGround: Theme.of(context).primaryColor,
+                  onPressed: () {}),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
                 child: Text(

@@ -39,6 +39,8 @@ class ForgotPasswordPage extends StatelessWidget {
               customButton(
                   context: context,
                   text: 'Send',
+                  colorText: Colors.white,
+                  colorBackGround: Theme.of(context).primaryColor,
                   onPressed: () {
                     showAlert(
                         context: context,

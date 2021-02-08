@@ -50,6 +50,7 @@ class WelcomePage extends StatelessWidget {
               ),
               customButton(
                   context: context,
+                  text: 'Log in',
                   colorBackGround: Theme.of(context).accentColor,
                   colorText: Colors.white,
                   onPressed: () {
@@ -62,35 +63,10 @@ class WelcomePage extends StatelessWidget {
               customButton(
                   onPressed: () => {},
                   context: context,
-                  text: 'Connect with faccebook',
+                  text: 'Connect with faccebook!!!!',
                   image: 'assets/f_logo_RGB-White_58.png',
                   colorBackGround: Theme.of(context).buttonColor,
                   colorText: Colors.white)
-              /* Container(
-                width: 350.0,
-                height: 45.0,
-                margin: EdgeInsets.only(top: 30.0),
-                child: RaisedButton(
-                  onPressed: () {},
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  color: Theme.of(context).buttonColor,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image(
-                        image: AssetImage('assets/f_logo_RGB-White_58.png'),
-                        width: 30.0,
-                        height: 30.0,
-                      ),
-                      Container(
-                          margin: EdgeInsets.only(left: 10.0),
-                          child: Text('Connect with faccebook')),
-                    ],
-                  ),
-                ),
-              ), */
             ],
           ),
         ],

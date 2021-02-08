@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 
-Widget customButton({
-  BuildContext context,
-  @required onPressed,
-  String text = 'Log In',
-  size,
-  String image = '',
-  @required Color colorBackGround,
-  @required Color colorText,
-}) {
+Widget customButton(
+    {BuildContext context,
+    @required onPressed,
+    String text = '',
+    size,
+    String image = '',
+    ImageProvider<Object> icon,
+    @required Color colorBackGround,
+    @required Color colorText,
+    double width = 350.0,
+    double height = 45,
+    double radius = 20.0}) {
   return Container(
-    margin: EdgeInsets.only(top: 20.0),
-    width: 350.0,
-    height: 45.0,
+    margin: EdgeInsets.only(top: radius),
+    width: width,
+    height: height,
     child: RaisedButton(
       onPressed: onPressed,
       shape: RoundedRectangleBorder(
@@ -20,9 +23,9 @@ Widget customButton({
       ),
       color: colorBackGround,
       child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-        image.isNotEmpty
+        (image.isNotEmpty || icon != null)
             ? Image(
-                image: AssetImage(image),
+                image: icon != null ? icon : AssetImage(image),
                 width: 30.0,
                 height: 30.0,
               )

@@ -59,6 +59,9 @@ class LoginPage extends StatelessWidget {
                       _passwordInput(),
                       customButton(
                           context: context,
+                          colorText: Colors.white,
+                          text: 'Log In',
+                          colorBackGround: Theme.of(context).accentColor,
                           onPressed: () {
                             Navigator.pushNamed(context, 'tabs');
                           }),

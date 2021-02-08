@@ -49,6 +49,8 @@ Future showAlert(
               customButton(
                   context: context,
                   text: textButton,
+                  colorText: Colors.white,
+                  colorBackGround: Theme.of(context).accentColor,
                   onPressed: onPresed != null
                       ? () {
                           Navigator.pushNamed(context, navigateTo);
