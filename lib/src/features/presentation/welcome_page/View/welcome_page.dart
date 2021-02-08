@@ -48,26 +48,10 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              /* Container(
-                width: 350.0,
-                height: 45.0,
-                child: RaisedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => LoginPage(),
-                        ));
-                  },
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  color: Theme.of(context).accentColor,
-                  child: Text('Log In'),
-                ),
-              ), */
               customButton(
                   context: context,
+                  colorBackGround: Theme.of(context).accentColor,
+                  colorText: Colors.white,
                   onPressed: () {
                     Navigator.push(
                         context,
@@ -75,7 +59,14 @@ class WelcomePage extends StatelessWidget {
                           builder: (context) => LoginPage(),
                         ));
                   }),
-              Container(
+              customButton(
+                  onPressed: () => {},
+                  context: context,
+                  text: 'Connect with faccebook',
+                  image: 'assets/f_logo_RGB-White_58.png',
+                  colorBackGround: Theme.of(context).buttonColor,
+                  colorText: Colors.white)
+              /* Container(
                 width: 350.0,
                 height: 45.0,
                 margin: EdgeInsets.only(top: 30.0),
@@ -99,7 +90,7 @@ class WelcomePage extends StatelessWidget {
                     ],
                   ),
                 ),
-              ),
+              ), */
             ],
           ),
         ],
