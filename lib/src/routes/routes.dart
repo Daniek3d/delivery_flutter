@@ -1,3 +1,4 @@
+import 'package:delivery_app/src/features/presentation/collection_detail_page/view/collection_detail_page.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'package:delivery_app/src/features/presentation/tabs/tabs_files.dart';
@@ -18,4 +19,5 @@ final routes = <String, WidgetBuilder>{
   'search': (BuildContext context) => SearchPage(),
   'filter': (BuildContext context) => FilterPage(),
   'collection': (BuildContext context) => CollectionPage(),
+  'collection-detail': (BuildContext context) => CollectionDetailPage(),
 };

@@ -17,9 +17,7 @@ class CollectionPage extends StatelessWidget {
             ),
             leading: Builder(
               builder: (BuildContext context) {
-                return BackButton(
-                  color: Colors.black,
-                );
+                return backButton(context, Colors.black);
               },
             ),
           ),
@@ -56,7 +54,9 @@ class CollectionPage extends StatelessWidget {
 
 Widget _card({BuildContext context, String titulo, String subtitulo}) {
   return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.pushNamed(context, 'collection-detail');
+      },
       child: Stack(
         children: [
           ClipRRect(
