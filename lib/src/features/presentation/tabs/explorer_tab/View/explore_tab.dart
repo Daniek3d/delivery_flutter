@@ -45,7 +45,11 @@ class ExploreTab extends StatelessWidget {
               SizedBox(
                 height: 10.0,
               ),
-              _headers(context, 'Collections', 'Show all'),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, 'collection');
+                  },
+                  child: _headers(context, 'Collections', 'Show all')),
               _sliderCollections(),
             ]),
           )
@@ -233,96 +237,6 @@ Widget _headers(BuildContext context, String textHeader, String textAction) {
   ]);
 }
 
-/* Widget _populares(BuildContext context, String foto) {
-  return Column(
-    children: [
-      Container(
-        margin: EdgeInsets.only(left: 10),
-        padding: EdgeInsets.symmetric(vertical: 3),
-        child: Row(
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image(
-                width: 80,
-                height: 80,
-                fit: BoxFit.cover,
-                image: NetworkImage(foto),
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(left: 20.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                      margin: EdgeInsets.symmetric(vertical: 7.0),
-                      child: titleText(
-                          text: 'Andy & Cindy\'s Diner',
-                          color: Colors.black,
-                          fontSize: 17)),
-                  Container(
-                    alignment: Alignment.centerLeft,
-                    margin: EdgeInsets.only(bottom: 5.0),
-                    child: Text(
-                      '87 Botsford Circle Apt',
-                      style: (TextStyle(
-                          color: gris,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 13.0)),
-                    ),
-                  ),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.star,
-                        color: amarillo,
-                        size: 16.0,
-                      ),
-                      Text(
-                        '4.5',
-                        style: (TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w500,
-                            fontSize: 13.0)),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(left: 5.0),
-                        child: Text(
-                          '230 rating',
-                          style: (TextStyle(
-                              color: gris,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 13.0)),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(left: 45.0),
-                        width: 110.0,
-                        height: 18.0,
-                        child: RaisedButton(
-                          elevation: 0.5,
-                          shape: StadiumBorder(),
-                          color: Theme.of(context).accentColor,
-                          onPressed: () {},
-                          child: Text('Delivery',
-                              style: TextStyle(
-                                  fontSize: 11.0, color: Colors.white)),
-                        ),
-                      )
-                    ],
-                  )
-                ],
-              ),
-            )
-          ],
-        ),
-      )
-    ],
-  );
-}
- */
 Widget _sliderCollections() {
   return Container(
     height: 180.0,
