@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-
-import 'custom_button.dart';
+part of '../widget_files.dart';
 
 Future showAlert(
     {BuildContext context,

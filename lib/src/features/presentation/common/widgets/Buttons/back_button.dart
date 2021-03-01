@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of '../widget_files.dart';
 
 Widget backButton(BuildContext context, Color color) {
   return IconButton(

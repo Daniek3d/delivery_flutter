@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:delivery_app/src/features/presentation/common/colors/colors.dart';
-import 'package:delivery_app/src/features/presentation/common/widgets/custom_button.dart';
-import 'package:delivery_app/src/features/presentation/common/widgets/back_button.dart';
+import 'package:delivery_app/src/features/presentation/common/widgets/widget_files.dart';
 
 //nCr2cWb7je8
 

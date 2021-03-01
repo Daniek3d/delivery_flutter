@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of '../widget_files.dart';
 
 Widget customButton(
     {BuildContext context,

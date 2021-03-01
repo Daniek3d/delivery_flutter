@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'widget_files.dart';
 
 class CustomInput extends StatelessWidget {
   final IconData icon;

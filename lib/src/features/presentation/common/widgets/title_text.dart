@@ -1,5 +1,4 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+part of 'widget_files.dart';
 
 class TitleText extends StatelessWidget {
   final String text;

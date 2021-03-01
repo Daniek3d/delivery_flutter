@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:delivery_app/src/features/presentation/common/colors/colors.dart';
-import 'package:delivery_app/src/features/presentation/common/widgets/back_button.dart';
-import 'package:delivery_app/src/features/presentation/common/widgets/custom_button.dart';
-import 'package:delivery_app/src/features/presentation/common/widgets/title_text.dart';
+import 'package:delivery_app/src/features/presentation/common/widgets/widget_files.dart';
 
 class SignUpPage extends StatelessWidget {
   @override

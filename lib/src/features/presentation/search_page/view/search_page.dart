@@ -1,10 +1,8 @@
-import 'package:delivery_app/src/features/presentation/common/colors/colors.dart';
-import 'package:delivery_app/src/features/presentation/common/widgets/card_vertical.dart';
-import 'package:delivery_app/src/features/presentation/common/widgets/header_double.dart';
-import 'package:delivery_app/src/features/presentation/common/widgets/populares_card.dart';
-import 'package:delivery_app/src/features/presentation/common/widgets/title_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+
+import 'package:delivery_app/src/features/presentation/common/colors/colors.dart';
+import 'package:delivery_app/src/features/presentation/common/widgets/widget_files.dart';
 
 class SearchPage extends StatelessWidget {
   @override

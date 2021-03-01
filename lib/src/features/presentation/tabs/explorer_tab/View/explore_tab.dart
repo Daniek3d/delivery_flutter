@@ -1,10 +1,4 @@
-import 'package:delivery_app/src/features/presentation/common/widgets/populares_card.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
-
-import 'package:delivery_app/src/features/presentation/common/colors/colors.dart';
-import 'package:delivery_app/src/features/presentation/common/widgets/title_text.dart';
+part of '../../tabs_files.dart';
 
 class ExploreTab extends StatelessWidget {
   @override
@@ -107,7 +101,9 @@ Widget _topBar(BuildContext context) {
               size: 30.0,
               color: Colors.white,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, 'filter');
+            },
           ),
         ),
       ],

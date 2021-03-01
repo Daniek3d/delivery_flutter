@@ -1,6 +1,4 @@
-import 'package:delivery_app/src/features/presentation/common/colors/colors.dart';
-import 'package:delivery_app/src/features/presentation/common/widgets/title_text.dart';
-import 'package:flutter/material.dart';
+part of '../widget_files.dart';
 
 class PopularesCard extends StatelessWidget {
   final ImageProvider<Object> image;

@@ -1,10 +1,4 @@
-import 'package:delivery_app/src/features/presentation/common/widgets/show_alert.dart';
-import 'package:flutter/material.dart';
-
-import 'package:delivery_app/src/features/presentation/tabs/explorer_tab/view/explore_tab.dart';
-import 'package:delivery_app/src/features/presentation/tabs/favourite_tab/View/favourites_tab.dart';
-import 'package:delivery_app/src/features/presentation/tabs/my_order_tab/View/my_order_tab.dart';
-import 'package:delivery_app/src/features/presentation/tabs/profile_tab/View/profiel_tab.dart';
+part of '../../tabs_files.dart';
 
 class TabsPage extends StatefulWidget {
   @override

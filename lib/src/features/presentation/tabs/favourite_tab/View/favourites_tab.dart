@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of '../../tabs_files.dart';
 
 class FavouritesTab extends StatefulWidget {
   @override
