@@ -97,11 +97,14 @@ Widget favouritesCard({
                     margin: EdgeInsets.only(left: 70.0), //(horizontal: 15.0),
                     width: 110.0,
                     height: 25.0,
-                    child: RaisedButton(
+                    child: ElevatedButton(
                       onPressed: () {},
-                      elevation: 0.5,
-                      shape: StadiumBorder(),
-                      color: orange,
+                      style: ButtonStyle(
+                        elevation: MaterialStateProperty.all<double>(0.5),
+                        shape: MaterialStateProperty.all(StadiumBorder()),
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Colors.red),
+                      ),
                       child: TitleText(
                         text: bottonText,
                         fontSize: 11.0,

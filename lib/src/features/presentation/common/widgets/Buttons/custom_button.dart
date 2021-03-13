@@ -16,32 +16,34 @@ Widget customButton(
     margin: EdgeInsets.only(top: radius),
     width: width,
     height: height,
-    child: RaisedButton(
-      onPressed: onPressed,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20.0),
-      ),
-      color: colorBackGround,
-      child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-        (image.isNotEmpty || icon != null)
-            ? Image(
-                image: icon != null ? icon : AssetImage(image),
-                width: 30.0,
-                height: 30.0,
-              )
-            : Container(),
-        Container(
-          margin: EdgeInsets.only(left: 10.0),
-          child: Text(
-            text,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 18,
-              color: colorText,
+    child: ElevatedButton(
+        onPressed: onPressed,
+        style: ButtonStyle(
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20.0),
+          )),
+          backgroundColor: MaterialStateProperty.all<Color>(colorBackGround),
+        ),
+        child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          (image.isNotEmpty || icon != null)
+              ? Image(
+                  image: icon != null ? icon : AssetImage(image),
+                  width: 30.0,
+                  height: 30.0,
+                )
+              : Container(),
+          Container(
+            margin: EdgeInsets.only(left: 10.0),
+            child: Text(
+              text,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18,
+                color: colorText,
+              ),
             ),
           ),
-        ),
-      ]),
-    ),
+        ])),
   );
 }

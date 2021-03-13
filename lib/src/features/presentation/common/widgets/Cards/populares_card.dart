@@ -98,15 +98,20 @@ class PopularesCard extends StatelessWidget {
                                 margin: EdgeInsets.only(left: 45.0),
                                 width: 110.0,
                                 height: 18.0,
-                                child: RaisedButton(
-                                  elevation: 0.5,
-                                  shape: StadiumBorder(),
-                                  color: orange,
+                                child: ElevatedButton(
                                   onPressed: onTap,
+                                  style: ButtonStyle(
+                                    shape: MaterialStateProperty.all(
+                                        StadiumBorder()),
+                                    backgroundColor:
+                                        MaterialStateProperty.all<Color>(
+                                            orange),
+                                  ),
                                   child: Text(botonText,
                                       style: TextStyle(
                                           fontSize: 11.0, color: Colors.white)),
-                                ))
+                                ),
+                              )
                             : Container(),
                       ],
                     )

@@ -1,5 +1,4 @@
 import 'package:delivery_app/src/features/presentation/common/colors/colors.dart';
-import 'package:delivery_app/src/features/presentation/tabs/tabs_files.dart';
 import 'package:flutter/material.dart';
 
 import 'package:delivery_app/src/features/presentation/common/widgets/widget_files.dart';

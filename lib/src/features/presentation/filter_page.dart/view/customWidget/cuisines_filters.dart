@@ -67,13 +67,12 @@ class _CuisinesfilterState extends State<Cuisinesfilter> {
 
 Widget _roundedButtonFilter(
     {Function onPress, bool isActive = false, String labelText = ''}) {
-  return RaisedButton(
-    onPressed: onPress,
-    elevation: 0.5,
-    color: Colors.white,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(30.0),
-      side: BorderSide(color: isActive ? orange : gris),
+  return ElevatedButton(
+    onPressed: () {},
+    style: ButtonStyle(
+      elevation: MaterialStateProperty.all<double>(0.5),
+      shape: MaterialStateProperty.all(StadiumBorder()),
+      backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
     ),
     child: Text(
       labelText,

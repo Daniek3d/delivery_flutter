@@ -195,7 +195,18 @@ Widget _tarjeta(BuildContext context) {
               margin: EdgeInsets.symmetric(horizontal: 5.0),
               width: 80.0,
               height: 18.0,
-              child: RaisedButton(
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(StadiumBorder()),
+                  backgroundColor: MaterialStateProperty.all<Color>(orange),
+                ),
+                child: Text(
+                  'Delivery',
+                  style: TextStyle(fontSize: 11.0, color: Colors.white),
+                ),
+              )
+              /* RaisedButton(
                 elevation: 0.5,
                 shape: StadiumBorder(),
                 color: Theme.of(context).accentColor,
@@ -204,7 +215,8 @@ Widget _tarjeta(BuildContext context) {
                   'Delivery',
                   style: TextStyle(fontSize: 11.0, color: Colors.white),
                 ),
-              ),
+              ) */
+              ,
             )
           ],
         )
