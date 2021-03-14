@@ -99,11 +99,10 @@ Widget favouritesCard({
                     height: 25.0,
                     child: ElevatedButton(
                       onPressed: () {},
-                      style: ButtonStyle(
-                        elevation: MaterialStateProperty.all<double>(0.5),
-                        shape: MaterialStateProperty.all(StadiumBorder()),
-                        backgroundColor:
-                            MaterialStateProperty.all<Color>(Colors.red),
+                      style: ElevatedButton.styleFrom(
+                        elevation: 0.5,
+                        shape: StadiumBorder(),
+                        primary: orange,
                       ),
                       child: TitleText(
                         text: bottonText,

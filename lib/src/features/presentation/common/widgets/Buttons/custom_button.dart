@@ -18,12 +18,11 @@ Widget customButton(
     height: height,
     child: ElevatedButton(
         onPressed: onPressed,
-        style: ButtonStyle(
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-              RoundedRectangleBorder(
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20.0),
-          )),
-          backgroundColor: MaterialStateProperty.all<Color>(colorBackGround),
+          ),
+          primary: colorBackGround,
         ),
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           (image.isNotEmpty || icon != null)

@@ -197,9 +197,9 @@ Widget _tarjeta(BuildContext context) {
               height: 18.0,
               child: ElevatedButton(
                 onPressed: () {},
-                style: ButtonStyle(
-                  shape: MaterialStateProperty.all(StadiumBorder()),
-                  backgroundColor: MaterialStateProperty.all<Color>(orange),
+                style: ElevatedButton.styleFrom(
+                  shape: StadiumBorder(),
+                  primary: orange,
                 ),
                 child: Text(
                   'Delivery',
