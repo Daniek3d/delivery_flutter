@@ -1,6 +1,7 @@
-import 'package:delivery_app/src/features/presentation/collection_detail_page/view/collection_detail_page.dart';
 import 'package:flutter/cupertino.dart';
 
+import 'package:delivery_app/src/features/presentation/collection_detail_page/view/collection_detail_page.dart';
+import 'package:delivery_app/src/features/presentation/place_detail_page/view/place_detail_page.dart';
 import 'package:delivery_app/src/features/presentation/tabs/tabs_files.dart';
 import 'package:delivery_app/src/features/presentation/collections_page/View/collection_page.dart';
 import 'package:delivery_app/src/features/presentation/filter_page.dart/view/filter_page.dart';
@@ -20,4 +21,5 @@ final routes = <String, WidgetBuilder>{
   'filter': (BuildContext context) => FilterPage(),
   'collection': (BuildContext context) => CollectionPage(),
   'collection-detail': (BuildContext context) => CollectionDetailPage(),
+  'place-detail': (BuildContext context) => PlaceDetailPage(),
 };
