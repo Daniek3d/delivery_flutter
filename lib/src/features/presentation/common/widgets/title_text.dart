@@ -33,7 +33,8 @@ Widget titleText(
     {String text = '',
     Color color = Colors.black,
     double fontSize = 30.0,
-    FontWeight fontWeight = FontWeight.bold}) {
+    FontWeight fontWeight = FontWeight.bold,
+    TextAlign textAlign = TextAlign.left}) {
   return Text(text,
       style: TextStyle(
         color: color,
