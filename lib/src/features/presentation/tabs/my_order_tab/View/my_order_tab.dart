@@ -6,12 +6,17 @@ class MyOrderTab extends StatefulWidget {
 }
 
 class _MyOrderTabState extends State<MyOrderTab> {
+  final emptyOrderState = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('MyOrderTab'),
-      ),
+      backgroundColor: bgGreyPage,
+      body: emptyOrderState
+          ? EmptyOrderView()
+          : Center(
+              child: Text('Order View'),
+            ),
     );
   }
 }

@@ -12,6 +12,7 @@ import 'package:flutter/widgets.dart';
 import 'package:delivery_app/src/features/presentation/common/colors/colors.dart';
 import 'package:delivery_app/src/features/presentation/common/widgets/widget_files.dart';
 
+import 'package:delivery_app/src/features/presentation/tabs/my_order_tab/View/components/empty_order_view.dart';
 part 'package:delivery_app/src/features/presentation/tabs/explorer_tab/View/explore_tab.dart';
 part 'package:delivery_app/src/features/presentation/tabs/favourite_tab/View/favourites_tab.dart';
 part 'package:delivery_app/src/features/presentation/tabs/my_order_tab/View/my_order_tab.dart';
