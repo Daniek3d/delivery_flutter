@@ -36,6 +36,7 @@ Widget titleText(
     FontWeight fontWeight = FontWeight.bold,
     TextAlign textAlign = TextAlign.left}) {
   return Text(text,
+      textAlign: textAlign,
       style: TextStyle(
         color: color,
         fontWeight: fontWeight,
