@@ -134,93 +134,98 @@ Widget _sliderCards(BuildContext context) {
 }
 
 Widget _tarjeta(BuildContext context) {
-  return Container(
-    margin: EdgeInsets.all(5),
-    child: Column(
-      children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(20),
-          child: Image(
-            width: 180.0,
-            height: 120.0,
-            fit: BoxFit.cover,
-            image: NetworkImage('https://source.unsplash.com/YzncgJOl6bk'),
+  return GestureDetector(
+    onTap: () {
+      Navigator.pushNamed(context, 'place-detail');
+    },
+    child: Container(
+      margin: EdgeInsets.all(5),
+      child: Column(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Image(
+              width: 180.0,
+              height: 120.0,
+              fit: BoxFit.cover,
+              image: NetworkImage('https://source.unsplash.com/YzncgJOl6bk'),
+            ),
           ),
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 10.0),
-              child: Text(
-                'Adndy & Cindy\'s Diner',
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 17.0),
-              ),
-            ),
-            Container(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                '87 Botsfrod Circle Apt',
-                style: TextStyle(
-                    color: Theme.of(context).disabledColor,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 13.0),
-              ),
-            )
-          ],
-        ),
-        Row(
-          children: [
-            Icon(
-              Icons.star,
-              color: amarillo,
-              size: 16,
-            ),
-            Text(
-              '4.8',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 13.0),
-            ),
-            Text(
-              '233 ratings',
-              style: TextStyle(
-                  color: gris, fontWeight: FontWeight.w500, fontSize: 13.0),
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 5.0),
-              width: 80.0,
-              height: 18.0,
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  shape: StadiumBorder(),
-                  primary: orange,
-                ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 10.0),
                 child: Text(
-                  'Delivery',
-                  style: TextStyle(fontSize: 11.0, color: Colors.white),
+                  'Adndy & Cindy\'s Diner',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 17.0),
+                ),
+              ),
+              Container(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  '87 Botsfrod Circle Apt',
+                  style: TextStyle(
+                      color: Theme.of(context).disabledColor,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 13.0),
                 ),
               )
-              /* RaisedButton(
-                elevation: 0.5,
-                shape: StadiumBorder(),
-                color: Theme.of(context).accentColor,
-                onPressed: () {},
-                child: Text(
-                  'Delivery',
-                  style: TextStyle(fontSize: 11.0, color: Colors.white),
-                ),
-              ) */
-              ,
-            )
-          ],
-        )
-      ],
+            ],
+          ),
+          Row(
+            children: [
+              Icon(
+                Icons.star,
+                color: amarillo,
+                size: 16,
+              ),
+              Text(
+                '4.8',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 13.0),
+              ),
+              Text(
+                '233 ratings',
+                style: TextStyle(
+                    color: gris, fontWeight: FontWeight.w500, fontSize: 13.0),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 5.0),
+                width: 80.0,
+                height: 18.0,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    shape: StadiumBorder(),
+                    primary: orange,
+                  ),
+                  child: Text(
+                    'Delivery',
+                    style: TextStyle(fontSize: 11.0, color: Colors.white),
+                  ),
+                )
+                /* RaisedButton(
+                  elevation: 0.5,
+                  shape: StadiumBorder(),
+                  color: Theme.of(context).accentColor,
+                  onPressed: () {},
+                  child: Text(
+                    'Delivery',
+                    style: TextStyle(fontSize: 11.0, color: Colors.white),
+                  ),
+                ) */
+                ,
+              )
+            ],
+          )
+        ],
+      ),
     ),
   );
 }
