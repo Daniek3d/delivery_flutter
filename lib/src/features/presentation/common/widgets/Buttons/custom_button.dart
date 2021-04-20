@@ -1,26 +1,33 @@
 part of '../widget_files.dart';
 
-Widget customButton(
-    {BuildContext context,
-    @required onPressed,
-    String text = '',
-    size,
-    String image = '',
-    ImageProvider<Object> icon,
-    @required Color colorBackGround,
-    @required Color colorText,
-    double width = 350.0,
-    double height = 45,
-    double radius = 20.0}) {
+Widget customButton({
+  BuildContext context,
+  @required onPressed,
+  String text = '',
+  fontSize = 18.0,
+  Widget textButton,
+  size,
+  String image = '',
+  ImageProvider<Object> icon,
+  @required Color colorBackGround,
+  @required Color colorText,
+  double width = 350.0,
+  double height = 45,
+  @deprecated double radius = 20.0,
+  BorderRadiusGeometry borderRadius,
+  EdgeInsetsGeometry margin,
+}) {
+  // print();
   return Container(
-    margin: EdgeInsets.only(top: radius),
+    margin: margin == null ? EdgeInsets.only(top: radius) : margin,
     width: width,
     height: height,
     child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20.0),
+            borderRadius:
+                borderRadius == null ? BorderRadius.circular(20) : borderRadius,
           ),
           primary: colorBackGround,
         ),
@@ -34,14 +41,14 @@ Widget customButton(
               : Container(),
           Container(
             margin: EdgeInsets.only(left: 10.0),
-            child: Text(
-              text,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 18,
-                color: colorText,
-              ),
-            ),
+            child: text.length > 0
+                ? Text(text,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: fontSize,
+                      color: colorText,
+                    ))
+                : textButton,
           ),
         ])),
   );
