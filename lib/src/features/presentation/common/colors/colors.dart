@@ -11,3 +11,7 @@ final orangeWithHalfOpacity = Color.fromRGBO(255, 140, 0, 0.5);
 final fbButtonColor = Color.fromRGBO(0, 122, 255, 1.0);
 final negro = Colors.black;
 final white = Colors.white;
+final acentColor = Color.fromRGBO(255, 140, 0, 1.0);
+final primaryColor = Color.fromRGBO(10, 31, 68, 1.0);
+final buttonColor = Color.fromRGBO(0, 122, 255, 1.0);
+final disabledColor = Color.fromRGBO(142, 142, 147, 1.2);
