@@ -25,15 +25,7 @@ Widget favouritesCard({
     ),
     padding: EdgeInsets.only(left: 20, top: 20, bottom: 20),
     width: double.infinity,
-    decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-              color: Color.fromRGBO(210, 211, 215, 1.0),
-              offset: Offset(0, 5),
-              blurRadius: 10.0)
-        ]),
+    decoration: createboxDecorationWithShadow(),
     child: Row(
       children: [
         ClipRRect(
