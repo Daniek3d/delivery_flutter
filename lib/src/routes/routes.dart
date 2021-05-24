@@ -1,3 +1,4 @@
+import 'package:delivery_app/src/features/presentation/profile_detail_page/view/profile_detail_page.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'package:delivery_app/src/features/presentation/collection_detail_page/view/collection_detail_page.dart';
@@ -22,4 +23,5 @@ final routes = <String, WidgetBuilder>{
   'collection': (BuildContext context) => CollectionPage(),
   'collection-detail': (BuildContext context) => CollectionDetailPage(),
   'place-detail': (BuildContext context) => PlaceDetailPage(),
+  'profile-detail': (BuildContext context) => ProfileDetailPage(),
 };
